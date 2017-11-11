@@ -4,7 +4,7 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
 2. Käivitage alla laetud projekt mis loob veebiserveri: python manage.py runserver
 3. Minge brauseris aadressile: localhost:8000. Laetud leht peaks välja nägema selline:
 ![alt text](Screenshots/1.png)
-5. Avage views.py ja lisage
+4. Avage views.py ja lisage
    ```python
    # Impordi JsonResponse
    from django.http import JsonResponse
@@ -14,7 +14,7 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
        h22led = models.H22led.objects.all().values('inimese_nimi', 'h22lte_arv')
        return JsonResponse(list(h22led), safe=False)
    ```
-6. Avage interaktiivneGraafika/urls.py lisage endpoint views.get_data
+5. Avage interaktiivneGraafika/urls.py lisage endpoint views.get_data
    ```python
    urlpatterns = [
        url(r'^$', views.index, name='index'),
