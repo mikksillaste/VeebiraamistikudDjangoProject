@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Hääled</h1>
+<table border="1">
+    <tr>
+        <th>Nimi</th>
+        <th>Häälte arv</th>
+    </tr>
+
+    {% for item in h22led %}
+    <tr>
+        <td>{{item.inimese_nimi}}</td>
+        <td>{{item.h22lte_arv}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
