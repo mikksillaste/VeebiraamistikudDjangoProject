@@ -14,7 +14,7 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
        h22led = models.H22led.objects.all().values('inimese_nimi', 'h22lte_arv')
        return JsonResponse(list(h22led), safe=False)
    ```
-6. Avage interaktiivneGraafika/urls.py lisage
+6. Avage interaktiivneGraafika/urls.py lisage endpoint views.get_data
    ```python
    urlpatterns = [
        url(r'^$', views.index, name='index'),
