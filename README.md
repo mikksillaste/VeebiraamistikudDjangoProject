@@ -22,4 +22,4 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
        url(r'^api/data$', views.get_data, name='api-data'),
    ]
    ```
-6. Minge brauseris aadressile: localhost:8000/api/data. Laetud lehel peaks olema andmed json'i kujul
+6. Minge brauseris aadressile: localhost:8000/api/data. Laetud lehel peaks olema andmed JSON'i kujul
