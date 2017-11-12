@@ -71,6 +71,15 @@ function setChart() {
     }
 });
 }
+// Lisa hääl nupu vajutamisel kutsub see välja views.py'st h22leta funktsiooni vastava inimese id'ga, kellele hääl lisada ja värskendab lehte
+$('.btn-mini.btn-primary.c').click(function(){
+    var inimeseid;
+    inimeseid = $(this).attr("data-inimeseid");
+    $.get('/'+inimeseid+'/haaleta', function(){
+        location.reload();
+    });
+});
+
 {% endblock %}
 </script>
 
@@ -88,7 +97,11 @@ function setChart() {
             {% for item in h22led %}
             <tr>
                 <td>{{item.inimese_nimi}}</td>
-                <td>{{item.h22lte_arv}}</td>
+                <td id="h22led_{{ item.id }}">{{item.h22lte_arv}}</td>
+                <!-- Lisa nupp hääle lisamiseks -->
+                <td>
+                    <button id="lisaH22l" data-inimeseid="{{ item.id }}" class="btn-mini btn-primary c" type="button">Lisa Hääl</button>
+                </td>
             </tr>
             {% endfor %}
         </table>
