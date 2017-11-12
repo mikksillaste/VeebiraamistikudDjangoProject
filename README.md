@@ -52,7 +52,7 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
     })
     </script>
    ```
-9. Nüüd uuendame index.html koodi nii, et lõpptulemus on selline. Vaata kommentaare
+9. Nüüd uuendame index.html koodi nii, et lõpptulemus on selline(kopeeri kogu see kood ja kleebi index.html'i). Vaata kommentaare
    ```html
     {% extends 'base.html' %}
 
@@ -93,9 +93,11 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
        new Chart(ctx, {
        type: 'bar',
        data: {
+           // nimed = inimeste_nimed JSON'ist
            labels: nimed,
            datasets: [{
                label: 'Hääled',
+               // h22lteArv = h22lte_arv JSON'ist
                data: h22lteArv,
                backgroundColor: [
                    'rgba(255, 99, 132, 0.2)',
