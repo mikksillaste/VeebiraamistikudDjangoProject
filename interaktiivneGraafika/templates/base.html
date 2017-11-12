@@ -11,14 +11,14 @@
   </head>
   <body>
     <div class='container'>
-    {% block content %}
-    {% endblock content %}
+        {% block content %}
+        {% endblock content %}
     </div>
     {% include 'js.html' %}
     <script>
-    $(document).ready(function(){
-      {% block jquery %}{% endblock %}
-    })
+        $(document).ready(function(){
+            {% block jquery %}{% endblock %}
+        })
     </script>
   </body>
 </html>

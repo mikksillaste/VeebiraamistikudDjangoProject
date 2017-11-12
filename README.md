@@ -40,7 +40,7 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
    ```html
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">  
    ```
-   b) include js.html peale container div'i body sisse. 
+   b) include js.html peale container div'i body sisse. Lisab asjad js.html'ist
    ```python
    {% include 'js.html' %}
    ```
@@ -51,6 +51,33 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
       {% block jquery %}{% endblock %}
     })
     </script>
+   ```
+   d) base.html on nüüd selline
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+       <head>
+            <meta charset="utf-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+
+           <title>Django Charts</title>
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    </head>
+    <body>
+         <div class='container'>
+              {% block content %}
+              {% endblock content %}
+         </div>
+         {% include 'js.html' %}
+         <script>
+              $(document).ready(function(){
+                  {% block jquery %}{% endblock %}
+              })
+         </script>
+     </body>
+   </html>
    ```
 9. Nüüd uuendame index.html koodi nii, et lõpptulemus on selline(kopeeri kogu see kood ja kleebi index.html'i). Vaata kommentaare
    ```html
