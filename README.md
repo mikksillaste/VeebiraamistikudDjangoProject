@@ -22,7 +22,8 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
        url(r'^api/data$', views.get_data, name='api-data'),
    ]
    ```
-6. Minge brauseris aadressile: localhost:8000/api/data. Laetud lehel peaks olema andmed JSON'i kujul
+6. Käivita server ja mine brauseris aadressile: localhost:8000/api/data. Laetud lehel peaks olema andmed JSON'i kujul
+![alt text](Screenshots/4.png)
 7. Loo templates kataloogi js.html fail ja lisa sinna järgmised asjad:
    ```html
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
