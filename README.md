@@ -190,7 +190,7 @@ See projekt on Veebiraamistike 15.11 Interaktiivse graafilise andmelehestiku sid
 
     {% endblock %}
    ``` 
-10. Minge brauseris aadressile: localhost:8000. Laetud leht peaks välja nägema selline:
+10. Käivita server ja mine brauseris aadressile: localhost:8000. Laetud leht peaks välja nägema selline:
 ![alt text](Screenshots/2.png)
 
 11. Lisame funktisonaalsuse inimestele hääle lisamiseks
